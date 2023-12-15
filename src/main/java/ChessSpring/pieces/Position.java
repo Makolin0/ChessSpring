@@ -1,5 +1,7 @@
 package ChessSpring.pieces;
 
+import ChessSpring.PositionDTO;
+
 public class Position {
     private int x;
     private int y;
@@ -7,6 +9,14 @@ public class Position {
     public Position(int x, int y){
         this.x = x;
         this.y = y;
+    }
+    public Position(int position){
+        this.x = position % 8;
+        this.y = position / 8;
+    }
+    public Position(PositionDTO positionDTO){
+        this.x = positionDTO.getX();
+        this.y = positionDTO.getY();
     }
 
     public int getX() {
@@ -17,22 +27,22 @@ public class Position {
         return y;
     }
 
-    public int getPositionInt(){
+    public int getInt(){
         return 8*y + x;
     }
-    public Integer[] getPositionArray(){
+    public Integer[] getArray(){
         return new Integer[]{x, y};
     }
 
-    public void changePosition(int x, int y){
+    public void setPosition(int x, int y){
         this.x = x;
         this.y = y;
     }
-    public void changePosition(Integer[] position){
+    public void setPosition(Integer[] position){
         this.x = position[0];
         this.y = position[1];
     }
-    public void changePosition(int position){
+    public void setPosition(int position){
         this.x = position % 8;
         this.y = position / 8;
     }
@@ -40,5 +50,11 @@ public class Position {
     @Override
     public String toString() {
         return "{" + x + " , " + y + "}";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+
+        return this.x == ((Position) obj).x && this.y == ((Position) obj).y;
     }
 }

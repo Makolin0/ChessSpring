@@ -7,8 +7,14 @@ public interface Piece {
     public enum Team{
         WHITE, BLACK;
     }
+    public enum Type{
+        PAWN, BISHOP, KNIGHT, ROOK, QUEEN, KING;
+    }
 
-    public List<Position> getMovableSquares(Map<Integer, Piece> allPieces);
+    public void setPosition(Position position);
+    public Position getPosition();
+    public Team getTeam();
+    public Type getType();
+    public List<Position> getMovableList(Map<Integer, Piece> allPieces);
     public List<Position> getBeatableList(Map<Integer, Piece> allPieces);
-    public void move(Position coordinates);
 }
