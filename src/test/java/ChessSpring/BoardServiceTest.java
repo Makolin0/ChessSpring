@@ -30,12 +30,12 @@ class BoardServiceTest {
 
 
         System.out.println("adding pawns");
-        boardService.pieceMap.put(pawnB1.getPosition().getInt(),pawnB1);
-        boardService.pieceMap.put(pawnB2.getPosition().getInt(),pawnB2);
-        boardService.pieceMap.put(pawnW1.getPosition().getInt(),pawnW1);
-        boardService.pieceMap.put(pawnW.getPosition().getInt(),pawnW);
-        boardService.pieceMap.put(pawnB.getPosition().getInt(),pawnB);
-        boardService.pieceMap.put(pawnB3.getPosition().getInt(),pawnB3);
+        boardService.setPiece(pawnB1);
+        boardService.setPiece(pawnB2);
+        boardService.setPiece(pawnB3);
+        boardService.setPiece(pawnW1);
+        boardService.setPiece(pawnW);
+        boardService.setPiece(pawnB);
 
         System.out.println(boardService);
 
