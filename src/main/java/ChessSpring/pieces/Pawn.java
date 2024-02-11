@@ -1,6 +1,7 @@
 package ChessSpring.pieces;
 
-import ChessSpring.Test;
+import ChessSpring.model.DTO.PieceDTO;
+import ChessSpring.model.Position;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,11 @@ public class Pawn implements Piece{
         this.team = team;
         this.type = Type.PAWN;
         this.position = position;
+    }
+    public Pawn(PieceDTO pieceDTO){
+        this.team = pieceDTO.getTeam();
+        this.type = pieceDTO.getType();
+        this.position = new Position(pieceDTO.getPosition());
     }
 
     @Override

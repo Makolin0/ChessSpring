@@ -2,13 +2,9 @@ package ChessSpring;
 
 import ChessSpring.pieces.Pawn;
 import ChessSpring.pieces.Piece;
-import ChessSpring.pieces.Position;
+import ChessSpring.model.Position;
+import ChessSpring.services.BoardService;
 import org.junit.jupiter.api.Test;
-
-import java.util.HashMap;
-import java.util.Map;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class BoardServiceTest {
 
@@ -39,8 +35,9 @@ class BoardServiceTest {
 
         System.out.println(boardService);
 
-        boardService.beatPiece(new Position(4, 4), new Position(3, 5));
+        boardService.movePiece(new Position(4, 4), new Position(3, 5));
 
         System.out.println(boardService);
+
     }
 }

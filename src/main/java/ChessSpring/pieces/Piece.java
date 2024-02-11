@@ -1,5 +1,7 @@
 package ChessSpring.pieces;
 
+import ChessSpring.model.Position;
+
 import java.util.List;
 import java.util.Map;
 

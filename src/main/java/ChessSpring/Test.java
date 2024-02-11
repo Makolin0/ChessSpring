@@ -1,7 +1,8 @@
 package ChessSpring;
 
-import ChessSpring.pieces.Piece;
-import ChessSpring.pieces.Position;
+import ChessSpring.model.Position;
+import ChessSpring.repository.UserRepository;
+import ChessSpring.services.UserService;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,8 +46,6 @@ public class Test {
         posList.add(new Position(2));
         System.out.println(posList);
         System.out.println(posList.contains(new Position(2)));
-
-
-
     }
+
 }

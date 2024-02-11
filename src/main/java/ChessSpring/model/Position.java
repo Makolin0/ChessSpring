@@ -1,6 +1,6 @@
-package ChessSpring.pieces;
+package ChessSpring.model;
 
-import ChessSpring.PositionDTO;
+import ChessSpring.model.DTO.PositionDTO;
 
 public class Position {
     private int x;
@@ -15,8 +15,9 @@ public class Position {
         this.y = position / 8;
     }
     public Position(PositionDTO positionDTO){
-        this.x = positionDTO.getX();
-        this.y = positionDTO.getY();
+        int pos = positionDTO.getPosition();
+        this.x = pos % 8;
+        this.y = pos / 8;
     }
 
     public int getX() {

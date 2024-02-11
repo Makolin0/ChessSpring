@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @OpenAPIDefinition(
 		info = @Info(
 				title = "API for chess elements",
-				version = "0.01",
+				version = "1.0",
 				description = "board modifying elements for chess playthrough"
 		)
 )

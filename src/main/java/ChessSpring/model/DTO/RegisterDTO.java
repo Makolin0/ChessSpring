@@ -1,4 +1,4 @@
-package ChessSpring;
+package ChessSpring.model.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class PositionDTO {
-    private int x;
-    private int y;
+public class RegisterDTO {
+    private String username;
+    private String email;
+    private String password;
 }
